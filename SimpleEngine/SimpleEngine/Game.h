@@ -29,7 +29,9 @@ private:
 
 public:
 	bool initialize();
+	void load();
 	void loop();
+	void unload();
 	void close();
 
 	void addActor(Actor* actor);

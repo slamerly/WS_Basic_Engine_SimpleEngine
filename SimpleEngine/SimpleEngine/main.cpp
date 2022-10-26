@@ -10,7 +10,9 @@ int main(int argc, char** argv)
     bool isGameInit = instance.initialize();
     if (isGameInit)
     {
+        instance.load();
         instance.loop();
+        instance.unload();
     }
     instance.close();
 

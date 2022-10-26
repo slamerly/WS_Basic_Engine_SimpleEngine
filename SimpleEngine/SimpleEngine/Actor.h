@@ -15,7 +15,7 @@ public:
 		Active, Paused, Dead
 	};
 
-	Actor() = default;
+	Actor();
 	virtual ~Actor();
 	Actor(const Actor&) = delete;
 	Actor& operator=(const Actor&) = delete;
