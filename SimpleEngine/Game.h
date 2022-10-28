@@ -3,6 +3,8 @@
 #include "Window.h"
 #include "Renderer.h"
 #include "Actor.h"
+#include "SpriteComponent.h"
+#include "Astroid.h"
 
 using std::vector;
 
@@ -37,6 +39,13 @@ public:
 	void addActor(Actor* actor);
 	void removeActor(Actor* actor);
 
+	Renderer& getRenderer() { return renderer; }
+
+	// Game specific
+	vector<Astroid*>& getAstroids();
+	void addAstroid(Astroid* astroid);
+	void removeAstroid(Astroid* astroid);
+
 private:
 	void processInput();
 	void update(float dt);
@@ -49,5 +58,8 @@ private:
 	bool isUpdatingActors;
 	vector<Actor*> actors;
 	vector<Actor*> pendingActors;
+
+	// Game specific
+	vector<Astroid*> astroids;
 };
 
